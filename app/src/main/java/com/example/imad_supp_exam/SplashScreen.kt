@@ -16,5 +16,10 @@ class SplashScreen : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        // Splash Screen
+        // Transition to Main Activity Screen in 3000ms from Splash screen
+        // 
+
+
     }
 }
