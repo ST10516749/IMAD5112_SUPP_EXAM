@@ -19,7 +19,6 @@ class DetailActivity : AppCompatActivity() {
         val listView: ListView = findViewById(R.id.lvItems)
         val backButton: Button = findViewById(R.id.btnBack)
 
-        // Build a display string for each item by looping through the
         // parallel arrays in GroceryData. Each entry lines up by index.
         val displayItems = mutableListOf<String>()
         for (i in GroceryData.itemNames.indices) {

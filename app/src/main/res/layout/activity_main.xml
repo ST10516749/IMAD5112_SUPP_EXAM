@@ -3,30 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/background1"
     android:gravity="center"
 
+    android:orientation="vertical"
     android:padding="24dp">
 
 
     <TextView
-        android:id="@+id/tvAppTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Item Name"
-        android:textColor=""
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
         android:text=""
         android:textColor="@android:color/white"
-        android:textSize="16sp"
-        android:layout_marginBottom="40dp" />
+        android:textSize="16sp" />
 
 
     <androidx.cardview.widget.CardView
@@ -38,11 +28,11 @@
             android:id="@+id/tvTotalItems"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp"
             android:gravity="center"
+            android:padding="20dp"
+            android:text="Items"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:text="textview" />
+            android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
 
@@ -51,20 +41,20 @@
         android:id="@+id/btnAddItem"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:text="textview"
+        android:layout_marginBottom="16dp"
+        android:text="Add Item"
         android:textAllCaps="false"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp" />
+        android:textSize="16sp" />
 
 
     <Button
         android:id="@+id/btnViewList"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:text="textview"
-        android:textAllCaps="false"
-        android:textSize="16sp"
         android:backgroundTint="@android:color/white"
-        />
+        android:text="View List"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="16sp" />
 
 </LinearLayout>
