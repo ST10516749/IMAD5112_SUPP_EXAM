@@ -1,13 +1,19 @@
+@file:Suppress("ImplicitThis")
+
 package com.example.imad_supp_exam
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.imad_supp_exam.totalItemsTextView
 import kotlin.jvm.java
+
+private val Unit.totalItemsTextView: Int
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         updateTotalItemsDisplay()
 
 
-        // Navigate to the Detailed View screen (list of all items)
+        // Navigate to the Detailed View screen
         viewListButton.setOnClickListener {
             val intent = Intent(this, DetailActivity::class.isData)
             startActivity(intent)
@@ -43,11 +49,25 @@ class MainActivity : AppCompatActivity() {
         updateTotalItemsDisplay()
     }
 
-    //Uses GroceryData's loop-based calculation to update the on-screen total.
     private fun updateTotalItemsDisplay() {
         val total = GroceryData.getTotalItemCount()
-        val totalItemsTextView = null
+        val totalItemsTextView: TextView = findViewById(R.id.totalItemsTextView)
         totalItemsTextView.text = getString(R.string.total_items_format, total)
+    }
+
+
+}
+
+class GroceryData {
+    companion object {
+        val itemNames: Any
+        val categories: Any
+        val quantities: Any
+        val comments: Any
+
+        fun getTotalItemCount() {
+            TODO("Not yet implemented")
+        }
     }
 
 }

@@ -1,6 +1,9 @@
 package com.example.imad_supp_exam
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -34,8 +37,8 @@ class DetailActivity : AppCompatActivity() {
             displayItems.add(entry)
         }
 
-        // Simple built-in adapter to render each item as a row of text.
-        // (A custom row layout could be swapped in later for extra polish.)
+
+        // row layout
         val adapter = ArrayAdapter(
             this,
             android.R.layout.simple_list_item_1,
@@ -43,9 +46,9 @@ class DetailActivity : AppCompatActivity() {
         )
         listView.adapter = adapter
 
-        // Clean navigation back to MainActivity
+        // Back to main activity
         backButton.setOnClickListener {
-            finish() // returns to MainActivity, which is still on the back stack
+            finish()
         }
 
     }
