@@ -23,8 +23,10 @@ class SplashScreen(intent1: Intent) : AppCompatActivity() {
         android.os.Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             SplashScreen(intent)
-            finish() // Close current activity so user cannot go back to it
+            finish() // Close current activity so that user cannot go back to it
         }, 3000)
+
+
 
 
 
